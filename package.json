@@ -1,0 +1,32 @@
+{
+  "name": "vue-stative",
+  "version": "0.1.6",
+  "description": "Vue.js plugin to use stative",
+  "source": "src/vue-stative.js",
+  "main": "dist/vue-stative.js",
+  "module": "dist/vue-stative.m.js",
+  "unpkg": "dist/vue-stative.umd.js",
+  "repository": "alandecastros/vue-stative",
+  "scripts": {
+    "build": "microbundle build",
+    "dev": "microbundle watch"
+  },
+  "author": "Alan Castro",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  },
+  "keywords": [
+    "vue-stative",
+    "vuejs",
+    "vue",
+    "stative",
+    "state",
+    "reactive",
+    "rxjs"
+  ],
+  "dependencies": {
+    "stative": "^0.1.5",
+    "vue-rx": "^6.2.0"
+  }
+}
