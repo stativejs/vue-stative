@@ -8,8 +8,10 @@
   "unpkg": "dist/vue-stative.umd.js",
   "repository": "alandecastros/vue-stative",
   "scripts": {
+    "test": "Echo 'no tests implemented yet'",
     "build": "microbundle build",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "prepublishOnly": "npm run build"
   },
   "author": "Alan Castro",
   "license": "MIT",
@@ -26,7 +28,10 @@
     "rxjs"
   ],
   "dependencies": {
-    "stative": "^0.1.5",
+    "stative": "^0.1.6",
     "vue-rx": "^6.2.0"
-  }
+  },
+  "files": [
+    "/dist"
+  ]
 }
