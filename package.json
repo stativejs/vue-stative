@@ -9,12 +9,18 @@
   "repository": "alandecastros/vue-stative",
   "scripts": {
     "build": "microbundle build",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "prepublishOnly": "npm run build",
+    "release": "np"
   },
   "author": "Alan Castro",
   "license": "MIT",
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "microbundle": "^0.11.0",
+    "np": "^5.1.0"
   },
   "keywords": [
     "vue-stative",
@@ -26,7 +32,7 @@
     "rxjs"
   ],
   "dependencies": {
-    "stative": "^0.1.5",
+    "stative": "^0.1.8",
     "vue-rx": "^6.2.0"
   }
 }
