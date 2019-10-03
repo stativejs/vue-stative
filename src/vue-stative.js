@@ -20,11 +20,6 @@ export default {
         });
 
         return listenObject;
-      },
-      methods: {
-        set(path, value) {
-          state.set(path, value);
-        }
       }
     });
   }
