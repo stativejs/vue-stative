@@ -1,5 +1,5 @@
-import VueRx from "vue-rx";
-import state from "stative";
+import VueRx from 'vue-rx';
+import state from 'stative';
 
 export default {
   install(Vue) {

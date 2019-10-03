@@ -1,6 +1,6 @@
 {
   "name": "vue-stative",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "Vue.js plugin to use stative",
   "source": "src/vue-stative.js",
   "main": "dist/vue-stative.js",
@@ -11,12 +11,17 @@
     "test": "Echo 'no tests implemented yet'",
     "build": "microbundle build",
     "dev": "microbundle watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "np"
   },
   "author": "Alan Castro",
   "license": "MIT",
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "microbundle": "^0.11.0",
+    "np": "^5.1.0"
   },
   "keywords": [
     "vue-stative",
@@ -28,7 +33,7 @@
     "rxjs"
   ],
   "dependencies": {
-    "stative": "^0.1.6",
+    "stative": ">=0.1.10",
     "vue-rx": "^6.2.0"
   },
   "files": [
