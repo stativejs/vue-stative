@@ -17,12 +17,13 @@ import VueStative from 'vue-stative';
 Vue.use(VueStative);
 ```
 
-Now you can use stative state in templates
+Now you can choose to listen to stative in your components
 
 ```vue
 <template>
   <div>
-    <p>{{ state }}</p>
+    <p>Loading: {{ loading }}</p>
+    <p>Menus: {{ menus }}</p>
     <button @click="goToAbout"></button>
   </div>
 </template>
@@ -31,6 +32,7 @@ Now you can use stative state in templates
 import state from 'stative';
 
 export default {
+  listentTo: ['loading', 'menus'],
   created() {
     state.set({
       loading: false,

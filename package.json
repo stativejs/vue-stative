@@ -33,7 +33,8 @@
     "rxjs"
   ],
   "dependencies": {
-    "stative": ">=0.1.10",
+    "object-path": "^0.11.4",
+    "stative": "^0.1.11",
     "vue-rx": "^6.2.0"
   },
   "files": [
