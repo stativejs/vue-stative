@@ -1,5 +1,5 @@
-import VueRx from 'vue-rx';
 import state from 'stative';
+import VueRx from 'vue-rx';
 import objectPath from 'object-path';
 
 export default {
@@ -8,18 +8,20 @@ export default {
 
     Vue.mixin({
       subscriptions() {
-        const { listenTo } = this.$options;
+        const { subscribeTo } = this.$options;
 
-        if (!listenTo || !(listenTo instanceof Array)) {
+        if (!subscribeTo || !(subscribeTo instanceof Array)) {
           return {};
         }
 
-        const listenObject = {};
-        listenTo.forEach(path => {
-          objectPath.set(listenObject, path, state.subjects[path]);
+        const subscribeObject = {};
+        subscribeTo.forEach(path => {
+          if (objectPath.has(state.subjects, path)) {
+            objectPath.set(subscribeObject, path, state.subjects[path]);
+          }
         });
 
-        return listenObject;
+        return subscribeObject;
       }
     });
   }

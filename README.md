@@ -5,7 +5,7 @@ Vue.js plugin to use stative.
 ### Installation
 
 ```sh
-npm install vue-stative
+npm install vue-stative stative
 ```
 
 ### Usage
@@ -32,7 +32,7 @@ Now you can choose to listen to stative in your components
 import state from 'stative';
 
 export default {
-  listentTo: ['loading', 'menus'],
+  subscribeTo: ['loading', 'menus'],
   created() {
     state.set({
       loading: false,

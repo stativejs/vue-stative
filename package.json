@@ -6,7 +6,7 @@
   "main": "dist/vue-stative.js",
   "module": "dist/vue-stative.m.js",
   "unpkg": "dist/vue-stative.umd.js",
-  "repository": "alandecastros/vue-stative",
+  "repository": "stativejs/vue-stative",
   "scripts": {
     "test": "Echo 'no tests implemented yet'",
     "build": "microbundle build",
@@ -21,7 +21,8 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "microbundle": "^0.11.0",
-    "np": "^5.1.0"
+    "np": "^5.1.0",
+    "stative": "^0.1.13"
   },
   "keywords": [
     "vue-stative",
@@ -34,8 +35,10 @@
   ],
   "dependencies": {
     "object-path": "^0.11.4",
-    "stative": "^0.1.11",
     "vue-rx": "^6.2.0"
+  },
+  "peerDependencies": {
+    "stative": "^0.1.13"
   },
   "files": [
     "/dist"
