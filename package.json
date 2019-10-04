@@ -2,7 +2,7 @@
   "name": "vue-stative",
   "version": "0.2.2",
   "description": "Vue.js plugin to use stative",
-  "source": "src/vue-stative.js",
+  "source": "src/index.js",
   "main": "dist/vue-stative.js",
   "module": "dist/vue-stative.m.js",
   "unpkg": "dist/vue-stative.umd.js",
