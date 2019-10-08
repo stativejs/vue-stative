@@ -1,6 +1,6 @@
 {
   "name": "vue-stative",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue.js plugin to use stative",
   "source": "src/index.js",
   "main": "dist/vue-stative.js",
