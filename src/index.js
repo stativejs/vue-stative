@@ -10,18 +10,27 @@ export default {
       subscriptions() {
         const { subscribeTo } = this.$options;
 
-        if (!subscribeTo || !(subscribeTo instanceof Array)) {
+        if (!subscribeTo) {
           return {};
         }
 
-        const subscribeObject = {};
-        subscribeTo.forEach(path => {
-          if (objectPath.has(state.subjects, path)) {
-            objectPath.set(subscribeObject, path, state.subjects[path]);
-          }
-        });
+        if (subscribeTo instanceof Array) {
+          const subscribeObject = {};
+          subscribeTo.forEach((path) => {
+            if (objectPath.has(state.subjects, path)) {
+              objectPath.set(subscribeObject, path, state.subjects[path]);
+            }
+          });
+          return subscribeObject;
+        }
 
-        return subscribeObject;
+        if (typeof subscribeTo === 'string' && subscribeTo === '*') {
+          return {
+            state: state.getState$()
+          };
+        }
+
+        return {};
       }
     });
   }
