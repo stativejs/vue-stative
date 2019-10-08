@@ -10,6 +10,10 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:vue/recommended',
+    'eslint:recommended',
+    'prettier/vue',
+    'plugin:prettier/recommended',
   ], // activate vue related rules
   rules: {
     'comma-dangle': 'off',
@@ -17,5 +21,6 @@ module.exports = {
     'import/no-unresolved': 'off',
     'implicit-arrow-linebreak': 'off',
     'import/prefer-default-export': 'off',
+    'prettier/prettier': ['error', { 'singleQuote': true }]
   },
 };

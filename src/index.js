@@ -16,7 +16,7 @@ export default {
 
         if (subscribeTo instanceof Array) {
           const subscribeObject = {};
-          subscribeTo.forEach((path) => {
+          subscribeTo.forEach(path => {
             if (objectPath.has(state.subjects, path)) {
               objectPath.set(subscribeObject, path, state.subjects[path]);
             }
