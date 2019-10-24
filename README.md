@@ -1,5 +1,7 @@
 # vue-stative
 
+[![NPM version](https://badge.fury.io/js/vue-stative.svg)](http://badge.fury.io/js/vue-stative)
+
 Vue.js plugin to use [stative](https://github.com/stativejs/stative).
 
 ### Installation
