@@ -1,6 +1,6 @@
 # vue-stative
 
-Vue.js plugin to use stative.
+Vue.js plugin to use [stative](https://github.com/stativejs/stative).
 
 ### Installation
 
@@ -13,11 +13,52 @@ npm install vue-stative stative
 ```ts
 import Vue from 'vue';
 import VueStative from 'vue-stative';
+import state from 'stative';
 
 Vue.use(VueStative);
+
+// set your app's initial state
+state.set({
+  loading: false,
+  menus: {
+    home: 'selected',
+    about: 'not-selected',
+    contact: 'not-selected',
+  },
+  articles: [
+    { id: 1, title: 'Simple state management' },
+    { id: 2, title: 'Reactive state' },
+    { id: 3, title: 'Made with RxJS' },
+  ],
+});
 ```
 
-Now you can choose to listen to stative in your components
+You can subscribe to every state change
+
+```vue
+<template>
+  <div>
+    <p>Loading: {{ state.loading }}</p>
+    <p>Menus: {{ state.menus }}</p>
+    <button @click="goToAbout"></button>
+  </div>
+</template>
+
+<script>
+import state from 'stative';
+
+export default {
+  subscribeTo: '*',
+  methods: {
+    goToAbout() {
+      state.set('menus.about', 'selected');      
+    }
+  }
+};
+</script>
+```
+
+Or just to some part of it
 
 ```vue
 <template>
@@ -32,26 +73,10 @@ Now you can choose to listen to stative in your components
 import state from 'stative';
 
 export default {
-  subscribeTo: ['loading', 'menus'],
-  created() {
-    state.set({
-      loading: false,
-      menus: {
-        home: 'selected',
-        about: 'not-selected',
-        contact: 'not-selected'
-      },
-      articles: [
-        { id: 1, title: 'Simple state management' },
-        { id: 2, title: 'Reactive state' },
-        { id: 3, title: 'RxJS' }
-      ]
-    });
-  },
+  subscribeTo: ['loading', 'menus'],  
   methods: {
-    goToAbout() {
-      state.update('menus.home', 'not-selected');
-      state.update('menus.about', 'selected');
+    goToAbout() {      
+      state.set('menus.about', 'selected');
     }
   }
 };
