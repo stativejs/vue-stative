@@ -85,4 +85,6 @@ export default {
 </script>
 ```
 
+Checkout the [example app](https://github.com/stativejs/vue-stative-example).
+
 Enjoy!
