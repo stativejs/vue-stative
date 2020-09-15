@@ -1,3 +1,7 @@
+# Deprecated!
+
+As of Sept 15th 2020, vue-stative is fully deprecated.
+
 # vue-stative
 
 [![NPM version](https://badge.fury.io/js/vue-stative.svg)](http://badge.fury.io/js/vue-stative)
